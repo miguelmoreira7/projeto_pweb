@@ -1,0 +1,20 @@
+<div class="menu">
+    <div>
+        <button mat-icon-button class="example-icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        pesquisa
+    </div>
+    <div>
+        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+            <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Entrar</button>
+          <button mat-menu-item>Cadastrar</button>
+        </mat-menu>
+    </div>
+</div>
+

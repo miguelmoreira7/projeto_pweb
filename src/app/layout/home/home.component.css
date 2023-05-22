@@ -1,0 +1,86 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'um um um um um'
+    'tres tres tres quatro quatro'
+    'cinco cinco cinco seis seis';
+
+}
+#um {
+    grid-area: tres;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: #ffeee0;
+    
+}
+#dois {
+    grid-area: quatro;
+    height: 70vh;
+    background-image: url("src/assets/restaurante_fundo_2.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+#tres {
+    grid-area: um;
+    height: 70vh;
+    background-color: #967259;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#quatro {
+    grid-area: dois;
+    height: 70vh;
+}
+#cinco {
+    grid-area: cinco;
+    height: 70vh;
+}
+#seis {
+    grid-area: seis;
+    height: 70vh;
+}
+.fundo {
+    max-width: 100%;
+    height: auto;
+}
+.texto_container {
+    width: 70%;
+}
+.texto1 {
+    font-size: 48px;
+    word-break: normal;
+    line-height: 1.5;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 450;
+}
+.bloco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    width: 707px;
+    height: 284px;
+}
+.botao1 {
+    background-color: #967259 !important;
+    margin-right: 15px;
+}
+.botao2 {
+    background-color: #dbc1ac !important;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
