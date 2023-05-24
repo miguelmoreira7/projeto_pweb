@@ -41,6 +41,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+// Router
+import { RouterLink } from '@angular/router';
+//http
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -81,7 +85,9 @@ import { MatTableModule } from '@angular/material/table';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    RouterLink,
+    HttpClientModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -118,7 +124,9 @@ import { MatTableModule } from '@angular/material/table';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    RouterLink,
+    HttpClientModule
   ]
 })
 export class ImportsModule { }

@@ -1,0 +1,21 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "hugo",
+      "idade": 22,
+      "cpf": "12312312323",
+      "email": "hc@hotmail.com",
+      "senha": "hc123123"
+    }
+  ],
+  "restaurantes": [
+    {
+      "id": 1,
+      "nome": "moi de coentro",
+      "cnpj": "123123123",
+      "endereco": "rua 2",
+      "tipo": "almoço"
+    }
+  ]
+}

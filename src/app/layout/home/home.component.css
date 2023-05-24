@@ -2,10 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    'um um um um um'
-    'tres tres tres quatro quatro'
+    'intro intro intro intro intro'
+    'tres tres tres imagem1 imagem1'
     'cinco cinco cinco seis seis';
-
 }
 #um {
     grid-area: tres;
@@ -18,7 +17,7 @@
     
 }
 #dois {
-    grid-area: quatro;
+    grid-area: imagem1;
     height: 70vh;
     background-image: url("src/assets/restaurante_fundo_2.png");
     background-size: cover;
@@ -28,24 +27,23 @@
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
-#tres {
-    grid-area: um;
+#intro {
+    grid-area: intro;
     height: 70vh;
-    background-color: #967259;
+    background-color: #292929;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #quatro {
-    grid-area: dois;
     height: 70vh;
 }
 #cinco {
-    grid-area: cinco;
+    
     height: 70vh;
 }
 #seis {
-    grid-area: seis;
+    
     height: 70vh;
 }
 .fundo {
