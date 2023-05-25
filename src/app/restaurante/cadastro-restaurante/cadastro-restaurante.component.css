@@ -2,8 +2,11 @@
 }
 .card-cadastro {
     align-items: center;
-    background-color:#f5ebdf;
-    width: 400px;
+    background-color: #292929;
+    width: 600px;
     margin: 10px;
     box-shadow: none;
+}
+.conteudo {
+    width: 500px;
 }

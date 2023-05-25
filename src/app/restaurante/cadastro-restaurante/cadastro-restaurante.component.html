@@ -1,6 +1,6 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="container">
+<div fxLayout="row" class="container">
     <mat-card class="card-cadastro">
-        <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+        <mat-card-content class="conteudo" fxLayout="column">
             <mat-form-field appearance="fill">
                 <input matInput [(ngModel)]="restauranteManutencao.nome" placeholder="Digite o nome do restaurante" required>
             </mat-form-field>
@@ -27,7 +27,8 @@
             </mat-form-field>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button (click)="inserir()" [routerLink]="['/home']">Cadastrar</button>
+            <button mat-raised-button *ngIf="botaoManutencao === 'Cadastrar'" (click)="inserir()" [routerLink]="['/listagem-restaurantes']">{{botaoManutencao}}</button>
+            <button mat-raised-button *ngIf="botaoManutencao === 'Salvar'" (click)="atualizar()" [routerLink]="['/listagem-restaurantes']">{{botaoManutencao}}</button>
         </mat-card-actions>
     </mat-card>
 </div>

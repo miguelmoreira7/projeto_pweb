@@ -1,17 +1,19 @@
 .container {
     display: grid;
     width: 100%;
-    height: 100%;
+    height: 130%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     'img img login login login';
+    
 }
 .img {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-area: img;
-    background-color: black;
+    background-image: url("src/assets/login.png");
+    background-size: cover;
 }
 .logo img{
     max-width: 150px;
@@ -22,6 +24,8 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    background-color: #292929;
+
 }
 .dados {
     display: flex;
@@ -32,3 +36,13 @@
     height: 550px;
 }
 .inv {}
+
+.bemVindos {
+    color: white;
+    font-size: 48px;
+    word-break: normal;
+    line-height: 1.5;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 450;
+}
