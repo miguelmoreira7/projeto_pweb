@@ -1,0 +1,9 @@
+.container {
+}
+.card-cadastro {
+    align-items: center;
+    background-color:#f5ebdf;
+    width: 400px;
+    margin: 10px;
+    box-shadow: none;
+}

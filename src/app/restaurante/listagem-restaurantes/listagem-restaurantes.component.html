@@ -9,7 +9,7 @@
             {{restaurante.endereco}}           
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button>
+            <button mat-button [routerLink]="['/editar/restaurante', restaurante.id]">
                 <mat-icon>edit</mat-icon>
             </button>
             <button mat-button (click)="excluir(restaurante)">

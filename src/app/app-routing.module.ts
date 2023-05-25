@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'cadastro/:tipo',
     component: CadastroComponent
+  },
+  {
+    path: 'editar/:tipo/:id',
+    component: CadastroComponent
   }
 ];
 

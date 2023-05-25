@@ -45,7 +45,8 @@ import { MatTableModule } from '@angular/material/table';
 import { RouterLink } from '@angular/router';
 //http
 import { HttpClientModule } from '@angular/common/http';
-
+//flexLayout
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [],
@@ -87,7 +88,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSortModule,
     MatTableModule,
     RouterLink,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -126,7 +128,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSortModule,
     MatTableModule,
     RouterLink,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ]
 })
 export class ImportsModule { }
