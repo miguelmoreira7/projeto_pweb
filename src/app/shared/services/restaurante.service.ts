@@ -8,9 +8,19 @@ import { Observable } from 'rxjs';
 })
 export class RestauranteService {
   url_restaurantes = 'http://localhost:3000/restaurantes';
+  restaurantes: Restaurante[] = [];
 
   constructor(private http: HttpClient) {
 
+  }
+  validar (email: string, senha: string): number {
+    this.listar().subscribe(restaurantes => this.restaurantes = restaurantes)
+    for (let restaurante of this.restaurantes) {
+      if (restaurante.email === email && restaurante.senha === senha) {
+        return restaurante.id;
+      }
+    }
+    return 0
   }
   listar(): Observable<Restaurante[]> {
     return this.http.get<Restaurante[]>(this.url_restaurantes);

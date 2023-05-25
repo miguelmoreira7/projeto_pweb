@@ -1,5 +1,23 @@
 .card-restaurantes {
     width: 500px;
-    padding: 10px;
-    margin: 10px;
+    height: fit-content;
+    margin: 20px;
+}
+.card-restaurantes:hover {
+    cursor: pointer;
+}
+.tipo-restaurante {
+    background-color: red;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    color: white;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
 }

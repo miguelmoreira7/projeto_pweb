@@ -1,14 +1,12 @@
-<div fxLayout="row wrap" fxLayoutAlign="end">
-    <mat-icon class="botaoContagem" [matBadge]="restaurantes.length" matBadgeColor="primary">people</mat-icon>
-</div>
-<div>
+<div class="container">
     <mat-card class="card-restaurantes" *ngFor="let restaurante of restaurantes">
         <mat-card-header>
             <mat-card-title class="tipo-restaurante">{{restaurante.tipo}}</mat-card-title>
             <mat-card-title>{{restaurante.nome | titlecase}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            a
+            {{restaurante.cidade}} - {{restaurante.estado}} <br>
+            {{restaurante.endereco}}           
         </mat-card-content>
         <mat-card-actions>
             <button mat-button>

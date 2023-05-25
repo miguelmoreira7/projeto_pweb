@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { RestauranteModule } from '../restaurante/restaurante.module';
+import { UsuarioModule } from '../usuario/usuario.module';
 
 
 
@@ -20,7 +21,8 @@ import { RestauranteModule } from '../restaurante/restaurante.module';
   imports: [
     CommonModule,
     ImportsModule,
-    RestauranteModule
+    RestauranteModule,
+    UsuarioModule
   ],
   exports: [
     MenuComponent,

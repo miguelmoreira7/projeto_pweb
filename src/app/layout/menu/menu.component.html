@@ -1,19 +1,30 @@
 <div class="menu">
     <div>
-        <button mat-icon-button class="example-icon">
+        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="abas">
             <mat-icon>menu</mat-icon>
         </button>
+        <mat-menu #abas="matMenu">
+            <button mat-menu-item [routerLink]="['/home']">home</button>
+            <button mat-menu-item [routerLink]="['/listagem-restaurantes']">restaurantes</button>
+        </mat-menu>
     </div>
     <div>
         pesquisa
     </div>
     <div>
-        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="usuario">
             <mat-icon>person</mat-icon>
         </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item [routerLink]="['/login']">Entrar</button>
-          <button mat-menu-item>Cadastrar</button>
+        <mat-menu #usuario="matMenu">
+          <button mat-menu-item [routerLink]="['/login/usuario']">Entrar</button>
+          <button mat-menu-item [routerLink]="['/cadastro/usuario']">Cadastrar</button>
+        </mat-menu>
+        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="restaurante">
+            <mat-icon>restaurant</mat-icon>
+        </button>
+        <mat-menu #restaurante="matMenu">
+            <button mat-menu-item [routerLink]="['login/restaurante']">Entrar</button>
+            <button mat-menu-item [routerLink]="['/cadastro/restaurante']">Cadastrar</button>
         </mat-menu>
     </div>
 </div>
