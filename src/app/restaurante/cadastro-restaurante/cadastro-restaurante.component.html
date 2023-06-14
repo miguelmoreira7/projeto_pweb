@@ -28,7 +28,7 @@
         </mat-card-content>
         <mat-card-actions>
             <button mat-raised-button *ngIf="botaoManutencao === 'Cadastrar'" (click)="inserir()" [routerLink]="['/listagem-restaurantes']">{{botaoManutencao}}</button>
-            <button mat-raised-button *ngIf="botaoManutencao === 'Salvar'" (click)="atualizar()" [routerLink]="['/listagem-restaurantes']">{{botaoManutencao}}</button>
+            <button mat-raised-button *ngIf="botaoManutencao === 'Salvar'" (click)="atualizar()">{{botaoManutencao}}</button>
         </mat-card-actions>
     </mat-card>
 </div>

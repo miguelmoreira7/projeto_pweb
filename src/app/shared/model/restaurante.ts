@@ -1,5 +1,5 @@
 export interface Restaurante {
-    id: number;
+    id: string;
     nome: string;
     cnpj: string;
     endereco: string;

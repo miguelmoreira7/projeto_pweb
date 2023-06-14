@@ -1,7 +1,8 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { Restaurante } from 'src/app/shared/model/restaurante';
 import { RestauranteService } from 'src/app/shared/services/restaurante.service';
+import { RestauranteFirestoreService } from 'src/app/shared/services/restaurante-firestore.service';
 
 @Component({
   selector: 'app-cadastro-restaurante',
@@ -11,7 +12,7 @@ import { RestauranteService } from 'src/app/shared/services/restaurante.service'
 export class CadastroRestauranteComponent {
   botaoManutencao: String;
   restauranteManutencao: Restaurante = {
-    id: 0,
+    id: '',
     nome: '',
     cnpj: '',
     endereco: '',
@@ -21,19 +22,24 @@ export class CadastroRestauranteComponent {
     email: '',
     senha: '',
   }
-  constructor(private restauranteService: RestauranteService, private activatedRoute: ActivatedRoute) {
+  constructor(private restauranteService: RestauranteFirestoreService, private activatedRoute: ActivatedRoute, private roteador: Router) {
     this.botaoManutencao = 'Cadastrar';
     const id = this.activatedRoute.snapshot.paramMap.get('id')
     if (id) {
-      this.restauranteService.buscarPorId(Number(id)).subscribe(restaurante => this.restauranteManutencao = restaurante);
+      this.restauranteService.buscarPorId(id).subscribe(restaurante => this.restauranteManutencao = restaurante);
       this.botaoManutencao = 'Salvar';
-    }
+    } 
   }
 
   inserir () {
     this.restauranteService.inserir(this.restauranteManutencao).subscribe();
   }
   atualizar () {
-    this.restauranteService.editar(this.restauranteManutencao).subscribe();
-  }
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    if (id) {
+      this.restauranteService.editar(id, this.restauranteManutencao).subscribe(
+        () => this.roteador.navigate(['listagem-restaurantes'])
+      );
+    }
+  } 
 }

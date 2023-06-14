@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
+import { FirestoreModule } from './firestore/firestore.module';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,8 @@ import { RestauranteModule } from './restaurante/restaurante.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    RestauranteModule
+    RestauranteModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

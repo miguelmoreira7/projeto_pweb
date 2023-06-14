@@ -13,14 +13,14 @@ export class RestauranteService {
   constructor(private http: HttpClient) {
 
   }
-  validar (email: string, senha: string): number {
+  validar (email: string, senha: string): string {
     this.listar().subscribe(restaurantes => this.restaurantes = restaurantes)
     for (let restaurante of this.restaurantes) {
       if (restaurante.email === email && restaurante.senha === senha) {
         return restaurante.id;
       }
     }
-    return 0
+    return '0'
   }
   listar(): Observable<Restaurante[]> {
     return this.http.get<Restaurante[]>(this.url_restaurantes);

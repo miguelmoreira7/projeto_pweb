@@ -19,10 +19,10 @@ export class LoginRestauranteComponent {
   }
   validar(){
     const indice = this.restauranteService.validar(this.email, this.senha)
-    if (indice === 0) {
+    if (indice === '0') {
       console.log('restaurante não encontrado')
     }
-    if (indice != 0) {
+    if (indice != '0') {
       console.log('login efetuado')
     }
   }
