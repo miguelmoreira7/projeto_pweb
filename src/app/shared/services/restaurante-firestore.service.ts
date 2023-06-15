@@ -20,7 +20,6 @@ export class RestauranteFirestoreService {
   }
 
   inserir(restaurante: Restaurante): Observable<object>{
-    
     return from(this.restaurantes.add(Object.assign({}, restaurante)));
   }
   
