@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RestauranteService {
-  url_restaurantes = 'http://localhost:3000/restaurantes';
+  url_restaurantes = 'http://localhost:8080/restaurantes';
   restaurantes: Restaurante[] = [];
 
   constructor(private http: HttpClient) {
@@ -28,10 +28,10 @@ export class RestauranteService {
   inserir(restaurante: Restaurante): Observable<Restaurante> {
     return this.http.post<Restaurante>(this.url_restaurantes, restaurante);
   }
-  remover(id: number): Observable<Restaurante> {
+  remover(id: String): Observable<Restaurante> {
     return this.http.delete<Restaurante>(`${this.url_restaurantes}/${id}`);
   }
-  buscarPorId(id: number): Observable<Restaurante> {
+  buscarPorId(id: String): Observable<Restaurante> {
     return this.http.get<Restaurante>(`${this.url_restaurantes}/${id}`)
   }
   editar(restaurante: Restaurante): Observable<Restaurante> {
